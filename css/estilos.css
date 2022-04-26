@@ -1,0 +1,491 @@
+/* Fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bree+Serif&family=Roboto&display=swap');
+
+/*
+font-family: 'Bebas Neue', cursive;
+font-family: 'Bree Serif', serif;
+font-family: 'Roboto', sans-serif;
+*/
+
+/* General */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: rgba(248, 171, 28, 0.952);
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Body */
+.container {
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "banner banner"
+        "titulo titulo"
+        "imagen texto"
+        "footer footer";
+    grid-template-rows: auto;
+}
+
+.container2 {
+    display: flex;
+    flex-flow: column;
+}
+
+
+/* Header */
+header {
+    grid-area: header;
+    height: auto;
+    background-color: #000;
+}
+
+.menu {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    justify-content: right;
+    align-items: center;
+    gap: 1 rem;
+    margin: 1 rem;
+}
+
+.menu__item {
+    list-style: none;
+    font-weight: 600;
+    padding: 5px 5px 0px 5px;
+}
+
+header nav ul li a {
+    font-size: 140%;
+    color: rgb(88, 86, 86);
+}
+
+header nav ul li a:hover {
+    color: #fff
+}
+
+.linkActive {
+    color: #fff;
+}
+
+/* Banner */
+.banner {
+    grid-area: banner;
+    background-image: url(../media.jpg/ruta1.jpg);
+    background-size: cover;
+    background-position: center top;
+    display: flex;
+    flex-flow: column;
+    height: calc(439px - 32px);
+    align-items: center;
+    justify-content: center;
+}
+
+.banner h2 {
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Bree Serif', serif;
+    font-size: 350%;
+    text-align: center;
+}
+
+.banner--secundario {
+    height: 300px;
+}
+
+/* Main */
+h2 {
+    grid-area: titulo;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 250%;
+    padding-left: 1%;
+    margin: 50px 0px 5px 5px;
+}
+
+h3 {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 205%;
+    padding-left: 2%;
+    text-align: left;
+}
+
+.contenedor {
+    display: flex;
+}
+
+.smallimg {
+    grid-area: imagen;
+    width: 40%;
+    height: 40%;
+}
+
+.smallimg--smaller {
+    width: 35%;
+    height: 35%;
+}
+
+.parrafo {
+    grid-area: texto;
+    font-family: 'Roboto', sans-serif;
+    font-size: 125%;
+    padding-left: 2%;
+    padding-right: 2%;
+    margin-bottom: 10px;
+    text-align: left;
+    line-height: 30px;
+}
+
+.parrafo--destacado {
+    box-sizing: content-box;
+    background-color: white;
+}
+
+
+/* Footer */
+footer {
+    grid-area: footer;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: black;
+    height: 100px;
+    margin-top: 50px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+footer p {
+    font-family: 'Roboto', sans-serif;
+    line-height: 30px;
+    color: white;
+}
+
+footer div a {
+    color: white;
+    margin: 3px;
+}
+
+.icons {
+    font-size: 130%;
+}
+
+.fa-whatsapp {
+    color: white;
+    background-color: #3ec34f;
+    padding: 0.6 rem;
+    font-size: 50px;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 5%;
+    right: 2%;
+}
+
+
+/* Productos */
+.menu--secundario {
+    height: 200px;
+    margin: 10px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    justify-content: center;
+
+}
+
+.img {
+    border-radius: 5%;
+    transition: all 0.75s;
+}
+
+.img:hover {
+    transform: scale(1.05);
+    transition: all 0.75s;
+}
+
+.img1 {
+    background-image: url(../media.jpg/choco.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.img2 {
+    background-image: url(../media.jpg/caja.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.img3 {
+    background-image: url(../media.jpg/papel.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.img4 {
+    background-image: url(../media.jpg/oferta.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
+.black {
+    color: #000
+}
+
+div ul li {
+    list-style: none;
+    padding-left: 5%;
+    line-height: 145%;
+}
+
+table {
+    border: 3px solid #000;
+    border-collapse: collapse;
+    background-color: white;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+table td {
+    border: 3px solid #000;
+    padding: 10px;
+    text-align: center;
+}
+
+table tr:hover {
+    background: rgb(216, 121, 32);
+}
+
+table th {
+    text-align: center;
+}
+
+.fa-angle-up {
+    color: #000;
+    background-color: #fff;
+    padding: 5px;
+    font-size: 50px;
+    border-radius: 50%;
+    border: 2px solid #000;
+    position: fixed;
+    bottom: 5%;
+    right: 2%;
+}
+
+
+/* Contacto */
+
+form section label {
+    font-weight: 600;
+    font-size: 110%;
+}
+
+form section input {
+    height: 30px;
+    width: fit-content;
+    font-family: 'Roboto', sans-serif;
+    font-size: 80%;
+    margin: 3px 15px;
+    border: 1px solid;
+    padding: 2px 5px 2px 5px;
+    border-radius: 0.3rem;
+    box-shadow: 3px 3px 5px 0px rgb(0 0 0 /29%);
+}
+
+textarea {
+    width: 400px;
+    line-height: 20px;
+    padding: 10px 5px 10px 5px;
+    margin-top: 2%;
+    margin-bottom: 50px;
+    border: 1px solid;
+    resize: none;
+    border-radius: 0.3rem;
+    box-shadow: 3px 3px 5px 0px rgb(0 0 0 /29%);
+
+}
+
+.textoSmall {
+    font-family: 'Roboto', sans-serif;
+    font-size: 90%;
+}
+
+.boton {
+    width: 110px;
+    padding: 5px;
+    margin-top: 7px;
+    border: 1px solid;
+    border-radius: 0.3rem;
+    font-weight: 600;
+    box-shadow: 3px 3px 5px 0px rgb(0 0 0 /29%);
+}
+
+
+
+
+
+/* Media */
+@media only screen and (min-width:320px) and (max-width:1022px) {
+
+    /* Para todas las pages */
+    header nav ul li a {
+        font-size: 110%;
+    }
+    h1 {
+        font-size: 250%;
+    }
+    h2 {
+        font-size: 150%;
+    }
+    h3 {
+        font-size: 125%;
+    }
+    .smallimg {
+        display: none;
+    }
+    .parrafo {
+        margin: 5px;
+        font-size: 90%;
+    }
+
+    /* Para el footer */
+    footer {
+        font-size: 12px;
+        font-weight: 500;
+    }
+
+    /* Para secccion Productos.html */
+    .container2 {
+        justify-content: center;
+    }
+
+    /* Para seccion Contacto.html */
+    .form {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    textarea {
+        width: 250px;
+    }
+    .subform {
+        display: flex;
+        flex-flow: column;
+    }
+
+    /* Para seccion Pedidos.html */
+    #zonas {
+        height: 80%;
+        width: 80%;
+        padding: 5px;
+    }
+    .contenedor2 {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+@media only screen and (min-width:480px) and (max-width:1022px) {
+    header nav ul li a {
+        font-size: 120%;
+    }
+    footer {
+        font-size: 15px;
+        font-weight: 500;
+    }
+}
+
+@media only screen and (min-width:600px) and (max-width:1022px) {
+    h1 {
+        font-size: 300%;
+    }
+    h2 {
+        font-size: 200%;
+    }
+    .parrafo {
+        font-size: 110%;
+    }
+    footer {
+        font-size: 17px;
+        font-weight: 600;
+    }
+    .form {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    #zonas {
+        height: 60%;
+        width: 60%;
+        padding: 5px;
+    }
+}
+
+@media only screen and (min-width:768px) {
+    .smallimg {
+        display: flex;
+    }
+    .subform {
+        display: flex;
+        flex-flow: row;
+    }
+    .contenedor2 {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    #zonas {
+        height: 50%;
+        width: 50%;
+        padding: 5px;
+    }
+}
+
+
+
+/* grid-template-areas:
+"label1 input1"
+"label2 input2"
+"label3 input3"
+"label4 input4";
+grid-template-columns: 1fr 1fr;
+grid-template-rows: repeat(4, 1fr);
+}
+#lab1 {
+grid-area: label1;
+}
+#inp1 {
+grid-area: input1;
+}
+#lab2 {
+grid-area: label2;
+}
+#inp2 {
+grid-area: input2;
+}
+#lab3 {
+grid-area: label3;
+}
+#inp3 {
+grid-area: input3;
+}
+#lab4 {
+grid-area: label4;
+}
+#inp4 {
+grid-area: input4;
+} */
