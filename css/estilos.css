@@ -20,7 +20,8 @@ html {
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: rgba(248, 171, 28, 0.952);
+    /* background-color: rgba(248, 171, 28, 0.952); */
+    background-image: url(../media.jpg/fondo.png);
 }
 
 a {
@@ -92,23 +93,40 @@ header nav ul li a:hover {
     height: calc(439px - 32px);
     align-items: center;
     justify-content: center;
+    /* las animaciones estan abajo de todo */
+    animation-name: despliegue;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
 }
-
 .banner h2 {
     text-align: center;
 }
-
 h1 {
     font-family: 'Bree Serif', serif;
     font-size: 350%;
     text-align: center;
+    animation-name: despliegue;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
 }
-
+.banner h2, .banner h1{
+    animation-name: aparecer;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+}
 .banner--secundario {
     height: 300px;
+    animation-name: despliegue;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
 }
 
 /* Main */
+.efecto{
+    animation-name: aparecer;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+}
 h2 {
     grid-area: titulo;
     font-family: 'Bebas Neue', cursive;
@@ -204,7 +222,9 @@ footer div a {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 1fr;
     justify-content: center;
-
+    animation-name: despliegue;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
 }
 
 .img {
@@ -371,6 +391,14 @@ textarea {
     .container2 {
         justify-content: center;
     }
+    .menu--secundario {
+        background-position:center;
+        margin: 10px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        justify-content: center;
+    }
 
     /* Para seccion Contacto.html */
     .form {
@@ -408,6 +436,9 @@ textarea {
         font-size: 15px;
         font-weight: 500;
     }
+    .menu--secundario{
+        height: 300px;
+    }
 }
 
 @media only screen and (min-width:600px) and (max-width:1022px) {
@@ -434,6 +465,11 @@ textarea {
         width: 60%;
         padding: 5px;
     }
+    .menu--secundario {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(2, 1fr);
+    }
 }
 
 @media only screen and (min-width:768px) {
@@ -453,8 +489,33 @@ textarea {
         width: 50%;
         padding: 5px;
     }
+    .menu--secundario {
+        display: grid;
+        grid-template-columns:repeat(4, 1fr);
+        grid-template-rows:1fr;
+    }
 }
 
+/* Animaciones */
+@keyframes despliegue{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 100%;
+    }
+}
+@keyframes aparecer{
+    0%{
+        opacity: 0;
+    }
+    20%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
 
 
 /* grid-template-areas:

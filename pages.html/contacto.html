@@ -29,46 +29,51 @@
             <h1>Distribuidora Šturm</h1>
             <h2>Envases e insumos para panaderías y confiterías</h2>
         </div>
-        <h2>Contactanos</h2>
 
-        <form action="enviar.php" method="get" enctype="text/plain" class="parrafo form">
-            <section class="subform">
+        <div class="efecto">
+            <h2>Contactanos</h2>
+
+            <form action="enviar.php" method="get" enctype="text/plain" class="parrafo form">
+                <section class="subform">
+                    <div>
+                        <label for="" id="lab1">Nombre</label>
+                        <input type="text" placeholder="Ingrese su nombre" required id="inp1">
+                    </div>
+
+                    <div>
+                        <label for="" id="lab2">Apellido</label>
+                        <input type="text" placeholder="Ingrese su apellido" id="inp2">
+                    </div>
+                    <div>
+                        <label for="" id="lab3">Teléfono/Celular</label>
+                        <input type="text" placeholder="Ingrese su teléfono" required id="inp3">
+                    </div>
+                    <div>
+                        <label for="" id="lab4">Correo Electrónico</label>
+                        <input type="email" placeholder="Ingrese su mail" id="inp4">
+                    </div>
+                </section>
+
                 <div>
-                    <label for="" id="lab1">Nombre</label>
-                    <input type="text" placeholder="Ingrese su nombre" required id="inp1">
+                    ¿Desea recibir el ofertas y novedades?
+                    <input type="checkbox" name="acepta" value="1">
                 </div>
 
+                <select name="mensaje" class="textoSmall boton">
+                    <option value="Consulta">Consulta</option>
+                    <option value="Reclamo">Reclamo</option>
+                    <option value="Ayuda">Ayuda</option>
+                </select> <br>
+
+                <textarea name="" id="" cols="30" rows="10" placeholder="Ingrese su mensaje"
+                    class="textoSmall"></textarea>
+
                 <div>
-                    <label for="" id="lab2">Apellido</label>
-                    <input type="text" placeholder="Ingrese su apellido" id="inp2">
+                    <input type="submit" class="boton textoSmall">
+                    <input type="Reset" class="boton textoSmall">
                 </div>
-                <div>
-                    <label for="" id="lab3">Teléfono/Celular</label>
-                    <input type="text" placeholder="Ingrese su teléfono" required id="inp3">
-                </div>
-                <div>
-                    <label for="" id="lab4">Correo Electrónico</label>
-                    <input type="email" placeholder="Ingrese su mail" id="inp4">
-            </section>
-            </div>
-            <div>
-                ¿Desea recibir el ofertas y novedades?
-                <input type="checkbox" name="acepta" value="1">
-            </div>
-
-            <select name="mensaje" class="textoSmall boton">
-                <option value="Consulta">Consulta</option>
-                <option value="Reclamo">Reclamo</option>
-                <option value="Ayuda">Ayuda</option>
-            </select> <br>
-
-            <textarea name="" id="" cols="30" rows="10" placeholder="Ingrese su mensaje" class="textoSmall"></textarea>
-
-            <div>
-                <input type="submit" class="boton textoSmall">
-                <input type="Reset" class="boton textoSmall">
-            </div>
-        </form>
+            </form>
+        </div>
     </main>
     <footer>
         <p>Todos los derechos reservados ©</p>
